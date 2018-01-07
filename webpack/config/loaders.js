@@ -30,6 +30,16 @@ module.exports = [
       compact: process.env.NODE_ENV === "production",
       presets: babelPresets,
       plugins: [
+        ["transform-react-jsx", { "pragma":"h" }],
+        ["module-resolver", {
+          "root": ["../../node_modules", "../../src", appDir],
+          "alias": {
+            "react": "preact-compat",
+            "react-dom": "preact-compat",
+            // Not necessary unless you consume a module using `createClass`
+            "create-react-class": "preact-compat/lib/create-react-class"
+          }
+        }],
         ["direct-import", modules],
         ["transform-imports", {
           "@blueprintjs/core": {
@@ -37,11 +47,7 @@ module.exports = [
             preventFullImport: true,
             skipDefaultConversion: true
           }
-        }],
-        "transform-decorators-legacy",
-        "transform-react-remove-prop-types",
-        "transform-react-constant-elements",
-        "transform-react-inline-elements"
+        }]
       ]
     },
     include: [

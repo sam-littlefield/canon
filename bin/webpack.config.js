@@ -29,10 +29,16 @@ const commonLoaders = [
       compact: false,
       presets: ["react-hmre", ["env", {modules: false}], "react", "stage-0"],
       plugins: [
-        "transform-decorators-legacy",
-        "transform-react-remove-prop-types",
-        "transform-react-constant-elements",
-        "transform-react-inline-elements"
+        ["transform-react-jsx", { "pragma":"h" }],
+        ["module-resolver", {
+          "alias": {
+            "root": [".", "../node_modules"],
+            "react": "preact-compat",
+            "react-dom": "preact-compat",
+            // Not necessary unless you consume a module using `createClass`
+            "create-react-class": "preact-compat/lib/create-react-class"
+          }
+        }]
       ]
     }
   },

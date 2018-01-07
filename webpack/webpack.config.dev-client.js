@@ -26,7 +26,13 @@ module.exports = {
   },
   resolve: {
     modules: [path.join(appDir, "node_modules"), appDir, appPath, path.join(__dirname, "../src")],
-    extensions: [".js", ".jsx", ".css"]
+    extensions: [".js", ".jsx", ".css"],
+    alias: {
+      'react': 'preact-compat',
+      'react-dom': 'preact-compat',
+      // Not necessary unless you consume a module using `createClass`
+      'create-react-class': 'preact-compat/lib/create-react-class'
+    }
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
