@@ -38,6 +38,7 @@
     "babel-plugin-transform-imports": "^1.4.1",
     "babel-plugin-transform-react-constant-elements": "^6.5.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.10",
+    "babel-plugin-module-resolver": "^3.0.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.5.0",
@@ -115,8 +116,5 @@
     "webpack-hot-middleware": "^2.21.0",
     "yml-loader": "^2.1.0",
     "yn": "^2.0.0"
-  },
-  "devDependencies": {
-    "babel-plugin-module-resolver": "^3.0.0"
   }
 }

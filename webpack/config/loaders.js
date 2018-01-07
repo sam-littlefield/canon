@@ -32,7 +32,8 @@ module.exports = [
       plugins: [
 //        ["transform-react-jsx", { "pragma":"h" }],
         ["module-resolver", {
-          "root": ["../../node_modules", "../../src", appDir],
+          //          "root": ["."],
+          //"root": [path.join(appDir, 'node_modules')],
           "alias": {
             "react": "preact-compat",
             "react-dom": "preact-compat",
