@@ -29,14 +29,12 @@ const commonLoaders = [
       compact: false,
       presets: ["react-hmre", ["env", {modules: false}], "react", "stage-0"],
       plugins: [
-        ["transform-react-jsx", { "pragma":"h" }],
+        // ["transform-react-jsx", { "pragma":"h" }],
         ["module-resolver", {
           "alias": {
-            "root": [".", "../node_modules"],
+            "root": [".", srcPath, path.join(appDir, "app")],
             "react": "preact-compat",
-            "react-dom": "preact-compat",
-            // Not necessary unless you consume a module using `createClass`
-            "create-react-class": "preact-compat/lib/create-react-class"
+            "react-dom": "preact-compat"
           }
         }]
       ]
