@@ -57,21 +57,21 @@ class PercentageBar extends Component {
     let displayData = showAll ? data : cutoffFunction(data);
 
     if (sort) displayData = displayData.sort(sort);
-  
+
     return <div className="PercentageBar">
       <h3 className="pb-title">{title}</h3>
-      { 
+      {
         displayData.map((d, i) => {
           const percent = d[value] / total * 100;
           const label = d[groupBy];
           return <div key={`pb-${i}`}className="percent-wrapper">
             <p className="label s-size">{label}</p>
-            <div className="pt-progress-bar pt-intent-primary pt-no-stripes">
-              {!isNaN(percent) && <div className="pt-progress-meter" style={{width: `${percent}%`}}>
-              </div>}      
-              
+            <div className="bp3-progress-bar bp3-intent-primary bp3-no-stripes">
+              {!isNaN(percent) && <div className="bp3-progress-meter" style={{width: `${percent}%`}}>
+              </div>}
+
             </div>
-            <p className="percent-label xs-size">{numberFormat(d, value, total)}</p>    
+            <p className="percent-label xs-size">{numberFormat(d, value, total)}</p>
           </div>;
         })
       }

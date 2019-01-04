@@ -77,14 +77,14 @@ class NewProfile extends Component {
       .map(m => <option key={m} value={m}>{m}</option>) : [];
 
     return (
-      <div className="pt-dialog-body">
+      <div className="bp3-dialog-body">
         <div className="cms-field-container cms-field-container-inline">
           <label htmlFor="slug">Slug: </label>
-          <input id="slug" className="pt-input" type="text" value={profileData.slug} onChange={this.changeField.bind(this, "slug")}/>
+          <input id="slug" className="bp3-input" type="text" value={profileData.slug} onChange={this.changeField.bind(this, "slug")}/>
         </div>
         <div className="cms-field-container">
           Dimension:
-          <div className="pt-select">
+          <div className="bp3-select">
             <select className="field-input" value={profileData.dimension} onChange={this.chooseDimension.bind(this)}>
               <option value="default">Choose One</option>
               {dimOptions}
@@ -111,7 +111,7 @@ class NewProfile extends Component {
               tagInputProps={{onRemove: o => this.removeLevel.bind(this)(o)}}
               selectedItems={profileData.levels}
               popoverProps={{
-                popoverClassName: "pt-minimal",
+                popoverClassName: "bp3-minimal",
                 useSmartArrowPositioning: false
               }}
             />
@@ -120,7 +120,7 @@ class NewProfile extends Component {
         { profileData.dimension && profileData.levels.length > 0 &&
           <div className="cms-field-container">
             Measure:
-            <div className="pt-select">
+            <div className="bp3-select">
               <select className="field-input" value={profileData.measure} onChange={this.changeField.bind(this, "measure")}>
                 <option value="default">Choose One</option>
                 {measureOptions}

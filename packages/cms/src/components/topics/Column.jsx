@@ -21,7 +21,7 @@ class Column extends Component {
         { descriptions.map((content, i) => <div key={i} className="topic-description" dangerouslySetInnerHTML={{__html: content.description}} />) }
       </div>
       { visualizations.length > 1 && selectors.length > 0 && <div className="topic-selectors">
-        { selectors.map(selector => <div className="pt-select" key={selector.name}>
+        { selectors.map(selector => <div className="bp3-select" key={selector.name}>
           <select onChange={d => onSelector(selector.name, d.target.value)} disabled={loading} defaultValue={selector.default}>
             { selector.options.map(({option}) => <option value={option} key={option}>{variables[option]}</option>) }
           </select>
@@ -29,7 +29,7 @@ class Column extends Component {
       </div> }
       <div className="topic-flex">
         { visualizations.length === 1 && selectors.length > 0 && <div className="topic-selectors">
-          { selectors.map(selector => <div className="pt-select pt-fill" key={selector.name}>
+          { selectors.map(selector => <div className="bp3-select bp3-fill" key={selector.name}>
             <select onChange={d => onSelector(selector.name, d.target.value)} disabled={loading} defaultValue={selector.default}>
               { selector.options.map(({option}) => <option value={option} key={option}>{variables[option]}</option>) }
             </select>

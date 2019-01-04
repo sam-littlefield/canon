@@ -111,7 +111,7 @@ class StoryEditor extends Component {
         <div className="cms-card-list">
           {new Date(minData.date).toDateString()}
           {!showDate && <button onClick={() => this.setState({showDate: true})}>Choose Date...</button>}
-          {showDate && <DatePicker 
+          {showDate && <DatePicker
             value={new Date(minData.date)}
             onChange={this.setDate.bind(this)}
           />}
@@ -121,7 +121,7 @@ class StoryEditor extends Component {
         <h2 className="cms-section-heading">
           Descriptions
           <button className="cms-button cms-section-heading-button" onClick={this.addItem.bind(this, "story_description")}>
-            <span className="pt-icon pt-icon-plus" />
+            <span className="bp3-icon bp3-icon-plus" />
           </button>
         </h2>
         <div className="cms-card-list">
@@ -142,7 +142,7 @@ class StoryEditor extends Component {
         <h2 className="cms-section-heading">
           Footnotes
           <button className="cms-button cms-section-heading-button" onClick={this.addItem.bind(this, "story_footnote")}>
-            <span className="pt-icon pt-icon-plus" />
+            <span className="bp3-icon bp3-icon-plus" />
           </button>
         </h2>
         <div className="cms-card-list">
@@ -164,7 +164,7 @@ class StoryEditor extends Component {
         <h2 className="cms-section-heading">
           Authors
           <button className="cms-button cms-section-heading-button" onClick={this.addItem.bind(this, "author")}>
-            <span className="pt-icon pt-icon-plus" />
+            <span className="bp3-icon bp3-icon-plus" />
           </button>
         </h2>
         <div className="cms-card-list">

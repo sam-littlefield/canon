@@ -60,7 +60,7 @@ class TextCard extends Component {
     const {type, fields, plainfields} = this.props;
     const {minData} = this.state;
     const payload = {id: minData.id};
-    // For some reason, an empty quill editor reports its contents as <p><br></p>. Do not save 
+    // For some reason, an empty quill editor reports its contents as <p><br></p>. Do not save
     // this to the database - save an empty string instead.
     fields.forEach(field => payload[field] = minData[field] === "<p><br></p>" ? "" : minData[field]);
     if (plainfields) plainfields.forEach(field => payload[field] = minData[field] === "<p><br></p>" ? "" : minData[field]);
@@ -138,7 +138,7 @@ class TextCard extends Component {
           cancelButtonText="Cancel"
           confirmButtonText={alertObj.confirm}
           className="cms-confirm-alert"
-          iconName="pt-icon-warning-sign"
+          iconName="bp3-icon-warning-sign"
           intent={Intent.DANGER}
           isOpen={alertObj}
           onConfirm={alertObj.callback}
@@ -151,7 +151,7 @@ class TextCard extends Component {
         {/* title & edit toggle button */}
         <h5 className="cms-card-header">
           <button className="cms-button" onClick={this.openEditor.bind(this)}>
-            Edit <span className="pt-icon pt-icon-cog" />
+            Edit <span className="bp3-icon bp3-icon-cog" />
           </button>
         </h5>
 
@@ -181,7 +181,7 @@ class TextCard extends Component {
           title="Text Editor"
           inline="true"
         >
-          <div className="pt-dialog-body">
+          <div className="bp3-dialog-body">
             <PlainTextEditor data={minData} fields={plainfields} />
             <TextEditor data={minData} variables={variables} fields={fields.sort((a, b) => displaySort.indexOf(a) - displaySort.indexOf(b))} />
           </div>

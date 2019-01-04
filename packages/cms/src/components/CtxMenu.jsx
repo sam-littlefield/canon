@@ -45,7 +45,7 @@ class CtxMenu extends Component {
       }
       {node.itemType !== "profile" && <MenuDivider />}
       <MenuItem
-        className="pt-intent-danger"
+        className="bp3-intent-danger"
         onClick={this.props.deleteItem.bind(this, node)}
         text={`Delete ${node.itemType}`}
         iconName="delete"
@@ -54,7 +54,7 @@ class CtxMenu extends Component {
 
     return (
       <Popover content={menu} position={Position.RIGHT_TOP}>
-        <span className="pt-icon-standard pt-icon-cog" />
+        <span className="bp3-icon-standard bp3-icon-cog" />
       </Popover>
     );
   }

@@ -65,7 +65,7 @@ class Tabs extends Component {
       <div className="topic-flex">
         { <Viz config={visualization} key={tabIndex} className="topic-visualization" title={ title } slug={ `${slug}_${tabIndex}` } /> }
         { tabSelectors.length > 0 && <div className="topic-selectors">
-          { tabSelectors.map(selector => <div className="pt-select pt-fill" key={selector.name}>
+          { tabSelectors.map(selector => <div className="bp3-select bp3-fill" key={selector.name}>
             <select onChange={d => onSelector(selector.name, d.target.value)} disabled={loading} defaultValue={selector.default}>
               { selector.options.map(({option}) => <option value={option} key={option}>{variables[option]}</option>) }
             </select>

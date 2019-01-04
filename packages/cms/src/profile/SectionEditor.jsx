@@ -132,17 +132,17 @@ class SectionEditor extends Component {
         {/* current section options */}
         <div className="cms-editor-header">
           {/* change slug */}
-          <label className="pt-label cms-slug">
+          <label className="bp3-label cms-slug">
             Section slug
-            <div className="pt-input-group">
-              <input className="pt-input" type="text" value={minData.slug} onChange={this.changeField.bind(this, "slug")}/>
-              <button className="cms-button pt-button" onClick={this.save.bind(this)}>Rename</button>
+            <div className="bp3-input-group">
+              <input className="bp3-input" type="text" value={minData.slug} onChange={this.changeField.bind(this, "slug")}/>
+              <button className="cms-button bp3-button" onClick={this.save.bind(this)}>Rename</button>
             </div>
           </label>
           {/* visibility select */}
-          <label className="pt-label pt-fill">
+          <label className="bp3-label bp3-fill">
             Allowed
-            <div className="pt-select">
+            <div className="bp3-select">
               <select id="visibility-select" value={minData.allowed || "always"} onChange={this.chooseVariable.bind(this)}>
                 {varOptions}
               </select>
@@ -155,7 +155,7 @@ class SectionEditor extends Component {
         <h2 className="cms-section-heading">
           Section title
           {/* <button className="cms-button cms-section-heading-button" onClick={this.addItem.bind(this, "generator")}>
-            <span className="pt-icon pt-icon-plus" />
+            <span className="bp3-icon bp3-icon-plus" />
           </button> */}
         </h2>
         <div className="cms-card-list">
@@ -172,7 +172,7 @@ class SectionEditor extends Component {
         <h2 className="cms-section-heading">
           Subtitles
           <button className="cms-button cms-section-heading-button" onClick={this.addItem.bind(this, "section_subtitle")}>
-            <span className="pt-icon pt-icon-plus" />
+            <span className="bp3-icon bp3-icon-plus" />
           </button>
         </h2>
         <div className="cms-card-list">
@@ -194,7 +194,7 @@ class SectionEditor extends Component {
         <h2 className="cms-section-heading">
           Descriptions
           <button className="cms-button cms-section-heading-button" onClick={this.addItem.bind(this, "section_description")}>
-            <span className="pt-icon pt-icon-plus" />
+            <span className="bp3-icon bp3-icon-plus" />
           </button>
         </h2>
         <div className="cms-card-list">

@@ -93,9 +93,9 @@ class StoryTopicEditor extends Component {
 
         {/* layout select */}
         <div className="cms-editor-header">
-          <label className="pt-label pt-fill">
+          <label className="bp3-label bp3-fill">
             Layout
-            <div className="pt-select">
+            <div className="bp3-select">
               <select value={minData.type} onChange={this.changeField.bind(this, "type", true)}>
                 {typeOptions}
               </select>
@@ -123,7 +123,7 @@ class StoryTopicEditor extends Component {
         <h2 className="cms-section-heading">
           Subtitles
           <button className="cms-button cms-section-heading-button" onClick={this.addItem.bind(this, "storytopic_subtitle")}>
-            <span className="pt-icon pt-icon-plus" />
+            <span className="bp3-icon bp3-icon-plus" />
           </button>
         </h2>
         <div className="cms-card-list">
@@ -145,7 +145,7 @@ class StoryTopicEditor extends Component {
         <h2 className="cms-section-heading">
           Stats
           <button className="cms-button cms-section-heading-button" onClick={this.addItem.bind(this, "storytopic_stat")}>
-            <span className="pt-icon pt-icon-plus" />
+            <span className="bp3-icon bp3-icon-plus" />
           </button>
         </h2>
         <div className="cms-card-list">
@@ -167,7 +167,7 @@ class StoryTopicEditor extends Component {
         <h2 className="cms-section-heading">
           Descriptions
           <button className="cms-button cms-section-heading-button" onClick={this.addItem.bind(this, "storytopic_description")}>
-            <span className="pt-icon pt-icon-plus" />
+            <span className="bp3-icon bp3-icon-plus" />
           </button>
         </h2>
         <div className="cms-card-list">
@@ -187,7 +187,7 @@ class StoryTopicEditor extends Component {
         <h2 className="cms-section-heading">
           Visualizations
           <button className="cms-button cms-section-heading-button" onClick={this.addItem.bind(this, "storytopic_visualization")}>
-            <span className="pt-icon pt-icon-plus" />
+            <span className="bp3-icon bp3-icon-plus" />
           </button>
         </h2>
         <div className="cms-card-list visualizations">

@@ -209,16 +209,16 @@ class SelectorEditor extends Component {
                 <select value={option.allowed} onChange={this.chooseAllowed.bind(this, i)}>
                   { varOptions }
                 </select>
-                <button className="pt-button" onClick={this.moveUp.bind(this, i)}><span className="pt-icon pt-icon-arrow-up" /></button>
-                <button className="pt-button" onClick={this.moveDown.bind(this, i)}><span className="pt-icon pt-icon-arrow-down" /></button>
-                <button className="pt-button" onClick={this.deleteOption.bind(this, i)}><span className="pt-icon pt-icon-delete" /></button>
+                <button className="bp3-button" onClick={this.moveUp.bind(this, i)}><span className="bp3-icon bp3-icon-arrow-up" /></button>
+                <button className="bp3-button" onClick={this.moveDown.bind(this, i)}><span className="bp3-icon bp3-icon-arrow-down" /></button>
+                <button className="bp3-button" onClick={this.deleteOption.bind(this, i)}><span className="bp3-icon bp3-icon-delete" /></button>
                 <input type="checkbox" checked={option.isDefault} onChange={this.setDefault.bind(this, option.option)}/>
               </li>
             )
           }
         </ul>
-        <button className="pt-button" onClick={this.addOption.bind(this)}>Add Option <span className="pt-icon pt-icon-plus"/></button><br/>
-        <button className="pt-button" onClick={this.toggleCustom.bind(this)}>Custom Default <span className="pt-icon pt-icon-cog"/></button> 
+        <button className="bp3-button" onClick={this.addOption.bind(this)}>Add Option <span className="bp3-icon bp3-icon-plus"/></button><br/>
+        <button className="bp3-button" onClick={this.toggleCustom.bind(this)}>Custom Default <span className="bp3-icon bp3-icon-cog"/></button>
         {
           showCustom && <div>
             <select value={data.default} onChange={this.chooseCustom.bind(this)}>
