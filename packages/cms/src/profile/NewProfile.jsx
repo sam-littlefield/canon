@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {MenuItem} from "@blueprintjs/core";
-import {MultiSelect} from "@blueprintjs/labs";
+import {MultiSelect} from "@blueprintjs/select";
 
 class NewProfile extends Component {
 

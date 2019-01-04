@@ -4,7 +4,7 @@ import TextCard from "../components/cards/TextCard";
 import Loading from "components/Loading";
 import {DatePicker} from "@blueprintjs/datetime";
 
-import "@blueprintjs/datetime/dist/blueprint-datetime.css";
+import "@blueprintjs/datetime/lib/css/blueprint-datetime.css";
 
 const propMap = {
   author: "authors",

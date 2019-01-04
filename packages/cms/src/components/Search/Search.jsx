@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
-import {Popover2} from "@blueprintjs/labs";
+import {Popover} from "@blueprintjs/core";
 
 import axios from "axios";
 
@@ -152,7 +152,7 @@ class Search extends Component {
     return (
       <div ref={comp => this.container = comp} className={`cms-search bp3-control-group canon-search ${className} ${active ? "active" : ""}`}>
         {InactiveComponent && <InactiveComponent active={active} onClick={this.onToggle.bind(this)} />}
-        <Popover2 minimal={true} inline={true} autoFocus={false} isOpen={show}>
+        <Popover minimal={true} usePortal={false} autoFocus={false} isOpen={show}>
           <div className={`bp3-input-group bp3-fill ${active ? "active" : ""}`}>
             {icon && <span className="bp3-icon bp3-icon-search"></span>}
             <input type="text" className="bp3-input" ref={input => this.input = input} onChange={this.onChange.bind(this)} onFocus={this.onFocus.bind(this)} placeholder={placeholder} value={userQuery} />
@@ -169,7 +169,7 @@ class Search extends Component {
             {!results.length && <li className="no-results">No Results Found</li>}
             {results.length && buttonLink ? <a className="all-results bp3-button bp3-fill" href={`${buttonLink}?q=${userQuery}`}>Show All Results</a> : null}
           </ul>
-        </Popover2>
+        </Popover>
       </div>
     );
 
