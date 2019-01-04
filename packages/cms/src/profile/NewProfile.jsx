@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {MenuItem} from "@blueprintjs/core";
-import {MultiSelect} from "@blueprintjs/select";
+import {MultiSelect, ItemRenderer} from "@blueprintjs/select";
 
 class NewProfile extends Component {
 
@@ -97,14 +97,17 @@ class NewProfile extends Component {
             <MultiSelect
               items={levelList}
               itemPredicate={(q, o) => `${o.toLowerCase()}`.indexOf(q.toLowerCase()) >= 0}
-              itemRenderer={i =>
-                <MenuItem
-                  key={i.item}
-                  onClick={i.handleClick}
-                  text={i.item}
+              itemRenderer={(i, {handleClick, modifiers}) => {
+                if (!modifiers.matchesPredicate) {
+                  return null;
+                }
+                return <MenuItem
+                  key={i}
+                  onClick={handleClick}
+                  text={i}
                   shouldDismissPopover={false}
-                />
-              }
+                />;
+              }}
               noResults={<MenuItem disabled={true} text="No results." />}
               onItemSelect={o => profileData.levels.includes(o) ? this.removeLevel.bind(this)(o) : this.addLevel.bind(this)(o)}
               tagRenderer={o => o}
